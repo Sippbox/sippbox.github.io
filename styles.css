@@ -1,0 +1,123 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Dosis&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Atkinson Hyperlegible', Helvetica, sans-serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+#content-box {
+    text-align: center;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    margin-right: 50em;
+    background-color: #000000;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+#content-box #type {
+    font-size: 4em;
+    padding: 0 0 10px 0;
+}
+
+#content-box p {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
+
+
+.links {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.links h1{
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+}
+
+.link {
+    margin: 12px 0;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.link:last-of-type{
+    border: 3px solid gold;
+    color: gold;
+}
+
+.link:hover {
+    transform: scale(1.05);
+}
+
+.link img {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.link h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img[src="sippbox.png"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.2) 6px, transparent 2px),
+                linear-gradient(to bottom, rgba(0, 0, 255, 0.2) 6px, transparent 2px);
+    background-size: 50px 50px;
+    animation: scrollBackground 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes scrollBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 50px 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Add responsive styles here if needed */
+}
+
