@@ -11,6 +11,7 @@ body {
     align-items: center;
     height: 100vh;
     color: white;
+    overflow: hidden;
 }
 
 #content-box {
@@ -85,10 +86,23 @@ a {
     text-decoration: none;
 }
 
-img[src="sippbox.png"] {
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#sippimages {
     position: absolute;
     bottom: 0;
     right: 0;
+    
+    /* Make the image slide in from the right */
+    animation: slideInFromRight .8s ease-in-out;
+
 }
 
 .grid-container {
